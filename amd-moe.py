@@ -1,37 +1,3 @@
-#!POPCORN leaderboard amd-mixture-of-experts
-
-# This is a submission template for popcorn leaderboard 'amd-mixture-of-experts'.
-# Your task is as follows:
-# > For a more complete description, see: https://tinyurl.com/amd-comp-moe
-# > Implement a DeepSeek-style Mixture of Experts (MoE) layer for efficient transformer models
-# > on a single MI300X device.
-# > 
-# > MoE is a technique that allows scaling model capacity without proportionally increasing computational costs
-# > by using a routing mechanism to selectively activate only a subset of parameters for each token.
-# > 
-# > Your task:
-# > - Implement token routing using a simple softmax-based learned router
-# > - Route tokens to the top-k experts based on router probabilities
-# > - Process tokens through their assigned experts
-# > - Combine expert outputs weighted by router probabilities
-# > - Calculate appropriate auxiliary losses for training stability
-# > 
-# > Input:
-# > - `data`: Tuple of (input: torch.Tensor, weights: Dict[str, torch.Tensor], config: Dict)
-# >   - input: Input tensor of shape [bs, seq_len, d_hidden]
-# >   - weights: Dictionary containing model weights
-# >   - config: Dictionary containing model configuration parameters
-# > 
-# > Output:
-# > - Tuple containing:
-# >   - output: Processed tensor [bs, seq_len, d_model]
-# >   - aux_data: Dictionary with auxiliary data like router probabilities and losses
-# The deadline for this leaderboard is 2025-06-02 00:00:00+00:00
-
-# You can automatically route this file to specific GPUs by adding a line
-# `#!POPCORN gpus <GPUs>` to the header of this file.
-# Happy hacking!
-
 import torch
 from typing import Dict, Tuple, Optional
 
