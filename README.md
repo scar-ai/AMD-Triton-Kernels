@@ -6,7 +6,7 @@
 ![Framework](https://img.shields.io/badge/Framework-Triton%20%7C%20PyTorch-orange.svg)
 ![Contest](https://img.shields.io/badge/Origin-AMD%20Inference%20Sprint-red.svg)
 
-A collection of high-performance Triton kernels designed to accelerate state-of-the-art deepseek models on GPUs. This repository features an optimized FP8 matrix multiplication kernel for weights scaling following [this taskfrom gpumode](https://www.gpumode.com/leaderboard/399) and a complete, from-scratch implementation of a DeepSeek-style Mixture of Experts (MoE) layer following [this task from gpumode](https://www.gpumode.com/leaderboard/430). These kernels were originally developed for the AMD Inference Sprint.
+A collection of high-performance Triton kernels designed to accelerate state-of-the-art deepseek models on AMD GPUs. This repository features an optimized FP8 matrix multiplication kernel for weights scaling following [this task from gpumode](https://www.gpumode.com/leaderboard/399) and a complete, from-scratch implementation of a DeepSeek-style Mixture of Experts (MoE) layer following [this task from gpumode](https://www.gpumode.com/leaderboard/430). These kernels were originally developed for the AMD Inference Sprint.
 
 ## Key Features
 
