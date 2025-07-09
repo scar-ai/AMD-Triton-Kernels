@@ -25,7 +25,6 @@ A complete, end-to-end implementation of a parallelized Mixture of Experts layer
   - **`logsumexp` & `mean`**: Fused reduction kernels for calculating auxiliary losses.
   - **`gather_rows`**: Parallel row gathering for creating expert-specific mini-batches.
   - **`scatter_add_rows`**: Atomic scatter-add for combining expert outputs without race conditions.
-- **Auxiliary Loss Calculation:** Computes `router_z_loss` and `load_balancing_loss` on the GPU for a complete training/inference step.
 
 ### 2. FP8 Tiled GEMM (`amd-fp8-gemm.py`)
 
