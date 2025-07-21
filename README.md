@@ -109,9 +109,8 @@ M, N, K = 4096, 4096, 2048
 device = 'cuda'
 
 # 2. Create dummy FP8 tensors and FP32 scales
-# (Note: torch doesn't have a native FP8 type, so we use int8 for storage)
-a = torch.randint(-128, 127, (M, K), device=device, dtype=torch.int8)
-b = torch.randint(-128, 127, (K, N), device=device, dtype=torch.int8)
+a = torch.randint(-128, 127, (M, K), device=device, dtype=torch.float8_e4m3fnuz)
+b = torch.randint(-128, 127, (K, N), device=device, dtype=torch.float8_e4m3fnuz)
 
 # Per-block scaling example
 a_scale = torch.randn((M, K // 128), device=device, dtype=torch.float32)
